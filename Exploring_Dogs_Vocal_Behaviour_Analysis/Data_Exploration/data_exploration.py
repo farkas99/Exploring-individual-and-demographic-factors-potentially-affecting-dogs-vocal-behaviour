@@ -1,7 +1,7 @@
-# data_exploration.py
-
 import pandas as pd
 import os
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def load_data(filepath):
     """
@@ -21,10 +21,12 @@ def load_data(filepath):
         df_loaded = pd.read_excel(filepath)
         print(f"Data loaded successfully from {filepath}")
         return df_loaded
+    except FileNotFoundError:
+        print(f"File not found: {filepath}")
+    except ValueError:
+        print(f"Value error while loading data from: {filepath}")
     except pd.errors.EmptyDataError:
         print(f"No data found in: {filepath}")
-    except Exception as e:
-        print(f"An error occurred while loading data: {e}")
 
 def explore_data(df):
     """
@@ -50,9 +52,10 @@ def visualize_data(df):
         df (pd.DataFrame): The data to visualize.
     """
     plt.figure(figsize=(10, 6))
-    sns.countplot(data=df, x='SomeCategoryColumn')
-    plt.title('Distribution of Some Category')
-    plt.show()
+    sns.countplot(data=df, x='lang')  # Using 'lang' as an example
+    plt.title('Distribution of Language')
+    plt.savefig('language_distribution.png')  # Save the plot as a PNG file
+    plt.close()  # Close the plot to avoid display issues
 
 if __name__ == "__main__":
     data_filepath = "C:\\Users\\Farkas\\Documents\\Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour\\Exploring_Dogs_Vocal_Behaviour_Analysis\\base_data\\raw\\DATA_Base_stone.xlsx"
