@@ -6,6 +6,11 @@ This is Farkas Tóth's thesis project in the ELTE Ethological Department, superv
 ## Project Structure
 
 ```
+local folder: "C:\Users\Farkas\Documents\Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour"
+
+github repository: "https://github.com/farkas99/Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour"
+
+
 Exploring_Dogs_Vocal_Behaviour_Analysis/
 ┣ 📂base_data                # Contains base datasets for analysis
 ┃ ┣ 📂external               # External datasets used in the analysis
@@ -39,6 +44,9 @@ Exploring_Dogs_Vocal_Behaviour_Analysis/
     ┣ 📂python               # Python scripts for data analysis
     ┗ 📂utils                # Utility functions used in Project 2
 ```
+
+## Base Data Files Location
+"C:\Users\Farkas\Documents\Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour\Exploring_Dogs_Vocal_Behaviour_Analysis\base_data\raw\DATA_Base_stone.xlsx"
 
 ## Project Strategy
 
