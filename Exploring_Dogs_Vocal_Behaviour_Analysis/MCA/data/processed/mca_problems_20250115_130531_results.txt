@@ -1,0 +1,30 @@
+MCA Analysis Results (20250115_130531)
+===================
+
+Explained Inertia:
+Dimension 1: 45.61% (Cumulative: 45.61%)
+Dimension 2: 29.46% (Cumulative: 75.07%)
+Dimension 3: 24.93% (Cumulative: 100.00%)
+
+Variable Contributions:
+
+0 Contributions:
+  No_behavioral_problems__1: 24.75%
+  No_behavioral_problems__0: 11.12%
+  Jumps_on_people__1: 7.47%
+  Aggression_towards_other_dogs__1: 6.96%
+  He_she_barks_too_much__1: 6.88%
+
+1 Contributions:
+  Hyperactive__1: 19.53%
+  Jumps_on_people__1: 16.68%
+  Shy__1: 11.26%
+  Noise_sensitive_thunder,_firecrackers,_etc.__1: 10.35%
+  Aggression_towards_other_dogs__1: 7.55%
+
+2 Contributions:
+  Aggression_towards_people__1: 29.44%
+  Aggression_towards_other_dogs__1: 24.35%
+  Noise_sensitive_thunder,_firecrackers,_etc.__1: 11.80%
+  Shy__1: 8.00%
+  Separation_anxiety__1: 6.97%

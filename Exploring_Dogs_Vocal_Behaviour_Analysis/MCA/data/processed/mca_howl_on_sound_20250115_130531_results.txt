@@ -1,0 +1,30 @@
+MCA Analysis Results (20250115_130531)
+===================
+
+Explained Inertia:
+Dimension 1: 56.68% (Cumulative: 56.68%)
+Dimension 2: 23.21% (Cumulative: 79.89%)
+Dimension 3: 20.11% (Cumulative: 100.00%)
+
+Variable Contributions:
+
+0 Contributions:
+  He_she_doesn't_howl_for_any_of_the_above_options__0: 34.03%
+  Ambulance,_police_or_fire_vehicle_sirens__1: 29.54%
+  House_or_car_alarm__1: 13.31%
+  Ice_cream_truck__1: 9.80%
+  He_she_doesn't_howl_for_any_of_the_above_options__1: 7.24%
+
+1 Contributions:
+  Ice_cream_truck__1: 57.95%
+  Ambulance,_police_or_fire_vehicle_sirens__1: 16.44%
+  House_or_car_alarm__1: 16.15%
+  He_she_doesn't_howl_for_any_of_the_above_options__0: 3.70%
+  Ambulance,_police_or_fire_vehicle_sirens__0: 2.97%
+
+2 Contributions:
+  House_or_car_alarm__1: 65.51%
+  Ice_cream_truck__1: 28.67%
+  House_or_car_alarm__0: 2.42%
+  Ambulance,_police_or_fire_vehicle_sirens__1: 1.81%
+  Ice_cream_truck__0: 0.70%

@@ -43,32 +43,15 @@ Exploring_Dogs_Vocal_Behaviour_Analysis/
   ┗ 📂scripts                # Scripts for analysis in Project 2
     ┣ 📂python               # Python scripts for data analysis
     ┗ 📂utils                # Utility functions used in Project 2
+┣ 📂MCA                      # Multiple Correspondence Analysis Folder
+  ┣ 📂data                  # Data for MCA analysis
+  ┃ ┣ 📂raw                # Original binary variable CSV files
+  ┃ ┗ 📂processed          # Processed MCA analysis results
+  ┣ 📂scripts               # Python scripts for MCA analysis
+  ┣ 📂results               # Visualizations and plots
+  ┗ 📂README.md             # Detailed MCA analysis documentation
 ```
 
 ## Base Data Files Location
 "C:\Users\Farkas\Documents\Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour\Exploring_Dogs_Vocal_Behaviour_Analysis\base_data\raw\DATA_Base_stone.xlsx"
 
-## Project Strategy
-
-1. **Data Preparation**: Ensure that all data is cleaned and organized in the `data/processed` directory. Document any preprocessing steps taken.
-
-2. **Script Development**:
-   - Create separate scripts for R and Python in their respective directories.
-   - Use version control (Git) to track changes in scripts and data.
-
-3. **Analysis**:
-   - Perform exploratory data analysis (EDA) to understand the data.
-   - Use statistical methods to analyze the data, documenting findings in the `results/` directory.
-
-4. **Visualization**:
-   - Create visualizations to represent findings clearly. Store these in the `results/figures` directory.
-
-5. **Documentation**:
-   - Maintain thorough documentation in the `docs/` directory, including a literature review and analysis report.
-
-6. **Collaboration**:
-   - Regularly communicate with your supervisor to review progress and findings.
-   - Use GitHub for version control and collaboration.
-
-7. **Final Report**:
-   - Compile findings and visualizations into a final report, summarizing the analysis and conclusions.
