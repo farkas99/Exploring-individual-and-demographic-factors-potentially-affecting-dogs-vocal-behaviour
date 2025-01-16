@@ -40,6 +40,13 @@ def plot_mca_results(mca, mca_results, filepath, title, timestamp, original_df):
         import networkx as nx
         from scipy.spatial.distance import pdist, squareform
 
+        # Ensure the directory exists
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+
+        # Get absolute path to ensure correct saving
+        abs_filepath = os.path.abspath(filepath)
+        print(f"Attempting to save plot to: {abs_filepath}")
+
         plt.figure(figsize=(20, 15))
         plt.suptitle(f'MCA Analysis: {title} ({timestamp})', fontsize=16)
         
@@ -118,26 +125,102 @@ def plot_mca_results(mca, mca_results, filepath, title, timestamp, original_df):
                     cbar_kws={'label': 'Contribution %'})
         plt.title('Variable Contributions')
         
-        # Scatter Plot of First Two Dimensions Subplot (Top Right)
+        # Enhanced Scatter Plot of First Two Dimensions Subplot (Top Right)
         plt.subplot(2, 2, 4)
-        plt.scatter(mca_df['Dim1'], mca_df['Dim2'], alpha=0.7)
-        plt.title('Scatter of Variables')
+        
+        # Compute point sizes and colors based on contribution
+        contributions = mca.column_contributions_
+        
+        # Ensure we're using the first dimension's contributions
+        point_sizes = np.full(len(mca_df), 500)  # Default size
+        
+        # Use a distinct color palette
+        import matplotlib.cm as cm
+        import matplotlib.colors as mcolors
+        
+        # Create a custom colormap with high contrast colors
+        colors = ['red', 'blue', 'green', 'purple', 'orange', 'brown', 'pink', 'gray', 'olive', 'cyan']
+        n_colors = len(colors)
+        
+        # Map contributions to point sizes and colors
+        point_colors = np.zeros(len(mca_df))
+        for i, idx in enumerate(mca_df.index):
+            try:
+                # Find the index in the contributions DataFrame
+                contrib_index = contributions.index.get_loc(idx)
+                # Scale the contribution for point size
+                point_sizes[i] = max(contributions.iloc[contrib_index, 0] * 1000, 100)  # Ensure minimum size
+                # Assign a distinct color based on index
+                point_colors[i] = i % n_colors
+            except (KeyError, IndexError):
+                # Keep default size and color if no contribution found
+                point_colors[i] = i % n_colors
+        
+        # Create custom colormap
+        custom_cmap = mcolors.ListedColormap(colors)
+        
+        # Scatter plot with variable sizes and colors
+        scatter = plt.scatter(mca_df['Dim1'], mca_df['Dim2'], 
+                              alpha=0.7, 
+                              c=point_colors, 
+                              s=point_sizes, 
+                              cmap=custom_cmap)
+        
+        # Create a custom colorbar
+        cbar = plt.colorbar(scatter, label='Variable Categories', ticks=range(n_colors))
+        cbar.set_ticklabels(mca_df.index)
+        
+        plt.title('Variable Contributions and Positions')
         plt.xlabel('Dimension 1')
         plt.ylabel('Dimension 2')
         
-        # Annotate points
+        # Annotate points with more context
         for idx, row in mca_df.iterrows():
-            plt.annotate(idx, (row['Dim1'], row['Dim2']), 
-                         xytext=(5, 5), textcoords='offset points', 
-                         fontsize=8, alpha=0.7)
+            # Safely get contribution
+            try:
+                contribution_index = contributions.index.get_loc(idx)
+                contribution = contributions.iloc[contribution_index, 0]
+                plt.annotate(f'{idx}\n({contribution:.2%})', 
+                             (row['Dim1'], row['Dim2']), 
+                             xytext=(5, 5), 
+                             textcoords='offset points', 
+                             fontsize=8, 
+                             alpha=0.8,
+                             bbox=dict(boxstyle='round,pad=0.2', 
+                                       fc='yellow', 
+                                       alpha=0.3))
+            except Exception as e:
+                # Fallback annotation if contribution lookup fails
+                plt.annotate(idx, 
+                             (row['Dim1'], row['Dim2']), 
+                             xytext=(5, 5), 
+                             textcoords='offset points', 
+                             fontsize=8, 
+                             alpha=0.8)
+                print(f"Error annotating {idx}: {e}")
+        
+        # Add reference lines
+        plt.axhline(y=0, color='k', linestyle='--', linewidth=0.5)
+        plt.axvline(x=0, color='k', linestyle='--', linewidth=0.5)
         
         plt.tight_layout()
-        plt.savefig(filepath, dpi=300)
+        
+        # Save with additional error handling
+        try:
+            plt.savefig(abs_filepath, dpi=300, bbox_inches='tight')
+            print(f"Successfully saved plot to: {abs_filepath}")
+        except Exception as save_error:
+            print(f"Error saving plot: {save_error}")
+            print(f"Attempting to save with default parameters")
+            plt.savefig(abs_filepath)
+        
         plt.close()
         
         return explained_inertia
     except Exception as e:
         print(f"Error in plot_mca_results: {e}")
+        import traceback
+        traceback.print_exc()
         return []
 
 def analyze_mca_results(mca, filepath, timestamp):
