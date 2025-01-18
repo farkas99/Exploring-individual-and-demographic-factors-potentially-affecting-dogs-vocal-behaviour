@@ -1,0 +1,41 @@
+Detailed Cluster Interpretation
+============================
+
+Overview
+--------
+The analysis revealed two distinct clusters of dogs:
+Cluster 1: 519 dogs ( 9.3 %)
+Cluster 2: 5068 dogs ( 90.7 %)
+
+Cluster Characteristics
+----------------------
+
+Cluster 1 Characteristics:
+
+Most prevalent characteristics:
+1. Adult man (91.1%)
+2. A person who walks unusually limping. walking with a cane. staggering (71.1%)
+3. Another dog (64.7%)
+4. A man with a beard (59.3%)
+5. Adult woman (59.0%)
+
+
+Cluster 2 Characteristics:
+
+Most prevalent characteristics:
+1. Another dog (37.0%)
+2. Noise sensitive thunder. firecrackers. etc. (26.8%)
+3. Jumps on people (20.4%)
+4. A person who walks unusually limping. walking with a cane. staggering (16.5%)
+5. Aggression towards other dogs (15.5%)
+
+
+Behavioral Differences Between Clusters
+-----------------------------------
+
+Most distinctive characteristics (largest differences between clusters):
+1. Adult man (87.1% difference)
+2. Adult woman (58.8% difference)
+3. A man with a beard (58.2% difference)
+4. A person who walks unusually limping. walking with a cane. staggering (54.6% difference)
+5. Postman (45.8% difference)

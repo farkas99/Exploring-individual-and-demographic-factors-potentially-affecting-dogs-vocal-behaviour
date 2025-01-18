@@ -1,0 +1,323 @@
+
+==============================================
+Exploring: keep.csv 
+==============================================
+
+Dimensions (rows x columns): 5587 x 6 
+
+Column names:
+[1] "ID_full"                               
+[2] "Kennel_or_Fenced_Run"                  
+[3] "Other_e.g._boarding_house"             
+[4] "In_the_garden"                         
+[5] "Chained"                               
+[6] "Inside_your_home_flat_apartment._house"
+
+First 5 rows of data:
+  ID_full Kennel_or_Fenced_Run Other_e.g._boarding_house In_the_garden Chained
+1       1                    0                         0             0       0
+2       2                    0                         0             0       0
+3       3                    0                         0             0       0
+4       4                    0                         0             0       0
+5       5                    0                         0             0       0
+  Inside_your_home_flat_apartment._house
+1                                      1
+2                                      1
+3                                      1
+4                                      1
+5                                      1
+
+Summary statistics:
+    ID_full     Kennel_or_Fenced_Run Other_e.g._boarding_house In_the_garden   
+ Min.   :   1   Min.   :0.00000      Min.   :0.000000          Min.   :0.0000  
+ 1st Qu.:1420   1st Qu.:0.00000      1st Qu.:0.000000          1st Qu.:0.0000  
+ Median :2838   Median :0.00000      Median :0.000000          Median :0.0000  
+ Mean   :2842   Mean   :0.03114      Mean   :0.001969          Mean   :0.2665  
+ 3rd Qu.:4250   3rd Qu.:0.00000      3rd Qu.:0.000000          3rd Qu.:1.0000  
+ Max.   :5718   Max.   :1.00000      Max.   :1.000000          Max.   :1.0000  
+    Chained         Inside_your_home_flat_apartment._house
+ Min.   :0.000000   Min.   :0.0000                        
+ 1st Qu.:0.000000   1st Qu.:1.0000                        
+ Median :0.000000   Median :1.0000                        
+ Mean   :0.003222   Mean   :0.9184                        
+ 3rd Qu.:0.000000   3rd Qu.:1.0000                        
+ Max.   :1.000000   Max.   :1.0000                        
+
+Missing values per column:
+                               ID_full                   Kennel_or_Fenced_Run 
+                                     0                                      0 
+             Other_e.g._boarding_house                          In_the_garden 
+                                     0                                      0 
+                               Chained Inside_your_home_flat_apartment._house 
+                                     0                                      0 
+
+==============================================
+Exploring: howl_on_sound.csv 
+==============================================
+
+Dimensions (rows x columns): 5587 x 5 
+
+Column names:
+[1] "ID_full"                                         
+[2] "Ice_cream_truck"                                 
+[3] "He_she_doesn.t_howl_for_any_of_the_above_options"
+[4] "House_or_car_alarm"                              
+[5] "Ambulance._police_or_fire_vehicle_sirens"        
+
+First 5 rows of data:
+  ID_full Ice_cream_truck He_she_doesn.t_howl_for_any_of_the_above_options
+1       1               1                                                0
+2       2               0                                                1
+3       3               0                                                1
+4       4               0                                                1
+5       5               0                                                1
+  House_or_car_alarm Ambulance._police_or_fire_vehicle_sirens
+1                  0                                        0
+2                  0                                        0
+3                  0                                        0
+4                  0                                        0
+5                  0                                        0
+
+Summary statistics:
+    ID_full     Ice_cream_truck  
+ Min.   :   1   Min.   :0.00000  
+ 1st Qu.:1420   1st Qu.:0.00000  
+ Median :2838   Median :0.00000  
+ Mean   :2842   Mean   :0.02381  
+ 3rd Qu.:4250   3rd Qu.:0.00000  
+ Max.   :5718   Max.   :1.00000  
+ He_she_doesn.t_howl_for_any_of_the_above_options House_or_car_alarm
+ Min.   :0.0000                                   Min.   :0.00000   
+ 1st Qu.:1.0000                                   1st Qu.:0.00000   
+ Median :1.0000                                   Median :0.00000   
+ Mean   :0.8246                                   Mean   :0.03562   
+ 3rd Qu.:1.0000                                   3rd Qu.:0.00000   
+ Max.   :1.0000                                   Max.   :1.00000   
+ Ambulance._police_or_fire_vehicle_sirens
+ Min.   :0.0000                          
+ 1st Qu.:0.0000                          
+ Median :0.0000                          
+ Mean   :0.1532                          
+ 3rd Qu.:0.0000                          
+ Max.   :1.0000                          
+
+Missing values per column:
+                                         ID_full 
+                                               0 
+                                 Ice_cream_truck 
+                                               0 
+He_she_doesn.t_howl_for_any_of_the_above_options 
+                                               0 
+                              House_or_car_alarm 
+                                               0 
+        Ambulance._police_or_fire_vehicle_sirens 
+                                               0 
+
+==============================================
+Exploring: grow_to_whom.csv 
+==============================================
+
+Dimensions (rows x columns): 5587 x 10 
+
+Column names:
+ [1] "ID_full"                                                              
+ [2] "Adult_man"                                                            
+ [3] "Another_dog"                                                          
+ [4] "Adult_woman"                                                          
+ [5] "Postman"                                                              
+ [6] "He_she_doesn.t_growl"                                                 
+ [7] "Children_less_than_10_years_old"                                      
+ [8] "A_man_with_a_beard"                                                   
+ [9] "A_person_who_walks_unusually_limping._walking_with_a_cane._staggering"
+[10] "veterinarian"                                                         
+
+First 5 rows of data:
+  ID_full Adult_man Another_dog Adult_woman Postman He_she_doesn.t_growl
+1       1         0           1           0       1                    0
+2       2         0           0           0       0                    1
+3       3         0           0           0       0                    0
+4       4         0           0           0       0                    1
+5       5         0           1           0       0                    0
+  Children_less_than_10_years_old A_man_with_a_beard
+1                               1                  0
+2                               0                  0
+3                               0                  0
+4                               0                  0
+5                               0                  0
+  A_person_who_walks_unusually_limping._walking_with_a_cane._staggering
+1                                                                     0
+2                                                                     0
+3                                                                     0
+4                                                                     0
+5                                                                     0
+  veterinarian
+1            0
+2            0
+3            0
+4            0
+5            0
+
+Summary statistics:
+    ID_full       Adult_man      Another_dog      Adult_woman     
+ Min.   :   1   Min.   :0.000   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:1420   1st Qu.:0.000   1st Qu.:0.0000   1st Qu.:0.00000  
+ Median :2838   Median :0.000   Median :0.0000   Median :0.00000  
+ Mean   :2842   Mean   :0.121   Mean   :0.3956   Mean   :0.05638  
+ 3rd Qu.:4250   3rd Qu.:0.000   3rd Qu.:1.0000   3rd Qu.:0.00000  
+ Max.   :5718   Max.   :1.000   Max.   :1.0000   Max.   :1.00000  
+    Postman       He_she_doesn.t_growl Children_less_than_10_years_old
+ Min.   :0.0000   Min.   :0.0000       Min.   :0.00000                
+ 1st Qu.:0.0000   1st Qu.:0.0000       1st Qu.:0.00000                
+ Median :0.0000   Median :0.0000       Median :0.00000                
+ Mean   :0.1086   Mean   :0.2409       Mean   :0.09468                
+ 3rd Qu.:0.0000   3rd Qu.:0.0000       3rd Qu.:0.00000                
+ Max.   :1.0000   Max.   :1.0000       Max.   :1.00000                
+ A_man_with_a_beard
+ Min.   :0.00000   
+ 1st Qu.:0.00000   
+ Median :0.00000   
+ Mean   :0.06515   
+ 3rd Qu.:0.00000   
+ Max.   :1.00000   
+ A_person_who_walks_unusually_limping._walking_with_a_cane._staggering
+ Min.   :0.0000                                                       
+ 1st Qu.:0.0000                                                       
+ Median :0.0000                                                       
+ Mean   :0.2157                                                       
+ 3rd Qu.:0.0000                                                       
+ Max.   :1.0000                                                       
+  veterinarian    
+ Min.   :0.00000  
+ 1st Qu.:0.00000  
+ Median :0.00000  
+ Mean   :0.06336  
+ 3rd Qu.:0.00000  
+ Max.   :1.00000  
+
+Missing values per column:
+                                                              ID_full 
+                                                                    0 
+                                                            Adult_man 
+                                                                    0 
+                                                          Another_dog 
+                                                                    0 
+                                                          Adult_woman 
+                                                                    0 
+                                                              Postman 
+                                                                    0 
+                                                 He_she_doesn.t_growl 
+                                                                    0 
+                                      Children_less_than_10_years_old 
+                                                                    0 
+                                                   A_man_with_a_beard 
+                                                                    0 
+A_person_who_walks_unusually_limping._walking_with_a_cane._staggering 
+                                                                    0 
+                                                         veterinarian 
+                                                                    0 
+
+==============================================
+Exploring: problems.csv 
+==============================================
+
+Dimensions (rows x columns): 5587 x 11 
+
+Column names:
+ [1] "ID_full"                                      
+ [2] "It_is_hard_or_impossible_to_call_him_her_back"
+ [3] "Separation_anxiety"                           
+ [4] "Noise_sensitive_thunder._firecrackers._etc."  
+ [5] "Aggression_towards_other_dogs"                
+ [6] "He_she_barks_too_much"                        
+ [7] "Jumps_on_people"                              
+ [8] "Shy"                                          
+ [9] "Aggression_towards_people"                    
+[10] "No_behavioral_problems"                       
+[11] "Hyperactive"                                  
+
+First 5 rows of data:
+  ID_full It_is_hard_or_impossible_to_call_him_her_back Separation_anxiety
+1       1                                             0                  0
+2       2                                             0                  0
+3       3                                             0                  0
+4       4                                             0                  0
+5       5                                             0                  0
+  Noise_sensitive_thunder._firecrackers._etc. Aggression_towards_other_dogs
+1                                           0                             0
+2                                           0                             0
+3                                           1                             0
+4                                           0                             0
+5                                           0                             0
+  He_she_barks_too_much Jumps_on_people Shy Aggression_towards_people
+1                     0               0   0                         0
+2                     0               1   0                         0
+3                     0               0   1                         0
+4                     0               0   0                         0
+5                     1               0   0                         0
+  No_behavioral_problems Hyperactive
+1                      1           0
+2                      0           0
+3                      0           0
+4                      1           0
+5                      0           1
+
+Summary statistics:
+    ID_full     It_is_hard_or_impossible_to_call_him_her_back
+ Min.   :   1   Min.   :0.00000                              
+ 1st Qu.:1420   1st Qu.:0.00000                              
+ Median :2838   Median :0.00000                              
+ Mean   :2842   Mean   :0.09808                              
+ 3rd Qu.:4250   3rd Qu.:0.00000                              
+ Max.   :5718   Max.   :1.00000                              
+ Separation_anxiety Noise_sensitive_thunder._firecrackers._etc.
+ Min.   :0.0000     Min.   :0.0000                             
+ 1st Qu.:0.0000     1st Qu.:0.0000                             
+ Median :0.0000     Median :0.0000                             
+ Mean   :0.1416     Mean   :0.2751                             
+ 3rd Qu.:0.0000     3rd Qu.:1.0000                             
+ Max.   :1.0000     Max.   :1.0000                             
+ Aggression_towards_other_dogs He_she_barks_too_much Jumps_on_people 
+ Min.   :0.0000                Min.   :0.0000        Min.   :0.0000  
+ 1st Qu.:0.0000                1st Qu.:0.0000        1st Qu.:0.0000  
+ Median :0.0000                Median :0.0000        Median :0.0000  
+ Mean   :0.1761                Mean   :0.1274        Mean   :0.2069  
+ 3rd Qu.:0.0000                3rd Qu.:0.0000        3rd Qu.:0.0000  
+ Max.   :1.0000                Max.   :1.0000        Max.   :1.0000  
+      Shy         Aggression_towards_people No_behavioral_problems
+ Min.   :0.0000   Min.   :0.00000           Min.   :0.00          
+ 1st Qu.:0.0000   1st Qu.:0.00000           1st Qu.:0.00          
+ Median :0.0000   Median :0.00000           Median :0.00          
+ Mean   :0.1691   Mean   :0.05441           Mean   :0.31          
+ 3rd Qu.:0.0000   3rd Qu.:0.00000           3rd Qu.:1.00          
+ Max.   :1.0000   Max.   :1.00000           Max.   :1.00          
+  Hyperactive   
+ Min.   :0.000  
+ 1st Qu.:0.000  
+ Median :0.000  
+ Mean   :0.106  
+ 3rd Qu.:0.000  
+ Max.   :1.000  
+
+Missing values per column:
+                                      ID_full 
+                                            0 
+It_is_hard_or_impossible_to_call_him_her_back 
+                                            0 
+                           Separation_anxiety 
+                                            0 
+  Noise_sensitive_thunder._firecrackers._etc. 
+                                            0 
+                Aggression_towards_other_dogs 
+                                            0 
+                        He_she_barks_too_much 
+                                            0 
+                              Jumps_on_people 
+                                            0 
+                                          Shy 
+                                            0 
+                    Aggression_towards_people 
+                                            0 
+                       No_behavioral_problems 
+                                            0 
+                                  Hyperactive 
+                                            0 

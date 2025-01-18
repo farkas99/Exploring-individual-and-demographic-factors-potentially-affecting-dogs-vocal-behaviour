@@ -1,0 +1,9 @@
+Documentation for: clustering_summary.txt
+Created: 2025-01-18 15:35:20
+
+Description:
+Summary of clustering results including optimal number of clusters and cluster characteristics
+
+File Location:
+Original: C:/Users/Farkas/Documents/Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour/Exploring_Dogs_Vocal_Behaviour_Analysis/Cluster_R/results/clustering/clustering_summary.txt
+Documentation: C:/Users/Farkas/Documents/Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour/Exploring_Dogs_Vocal_Behaviour_Analysis/Cluster_R/documentation/2_clustering_analysis/clustering_summary.txt

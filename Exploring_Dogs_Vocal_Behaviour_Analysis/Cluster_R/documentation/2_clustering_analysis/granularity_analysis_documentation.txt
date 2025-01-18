@@ -1,0 +1,9 @@
+Documentation for: granularity_analysis.txt
+Created: 2025-01-18 15:35:20
+
+Description:
+Analysis of data granularity to determine clustering feasibility
+
+File Location:
+Original: C:/Users/Farkas/Documents/Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour/Exploring_Dogs_Vocal_Behaviour_Analysis/Cluster_R/results/clustering_prep/granularity_analysis.txt
+Documentation: C:/Users/Farkas/Documents/Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour/Exploring_Dogs_Vocal_Behaviour_Analysis/Cluster_R/documentation/2_clustering_analysis/granularity_analysis.txt

@@ -1,0 +1,9 @@
+Documentation for: data_exploration_results.txt
+Created: 2025-01-18 15:35:20
+
+Description:
+Initial exploration of all datasets showing basic statistics and data structure
+
+File Location:
+Original: C:/Users/Farkas/Documents/Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour/Exploring_Dogs_Vocal_Behaviour_Analysis/Cluster_R/results/data_exploration_results.txt
+Documentation: C:/Users/Farkas/Documents/Exploring-individual-and-demographic-factors-potentially-affecting-dogs-vocal-behaviour/Exploring_Dogs_Vocal_Behaviour_Analysis/Cluster_R/documentation/1_data_exploration/initial_exploration.txt

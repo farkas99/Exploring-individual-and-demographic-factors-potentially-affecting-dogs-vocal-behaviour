@@ -1,0 +1,42 @@
+Clustering Analysis Summary
+=========================
+
+1. Optimal Number of Clusters
+---------------------------
+Based on silhouette analysis: 2 
+
+2. K-means Clustering Results
+---------------------------
+Cluster sizes:
+
+   1    2 
+ 519 5068 
+
+3. Hierarchical Clustering Results
+--------------------------------
+Cluster sizes:
+hc_clusters
+   1    2 
+5248  339 
+
+4. Clustering Comparison
+----------------------
+      hierarchical
+kmeans    1    2
+     1  189  330
+     2 5059    9
+
+5. Cluster Profiles
+-----------------
+# A tibble: 2 × 17
+  It_is_hard_or_impossible_to_call_h…¹ Separation_anxiety Noise_sensitive_thun…²
+                                 <dbl>              <dbl>                  <dbl>
+1                               0.116               0.187                  0.349
+2                               0.0963              0.137                  0.268
+# ℹ abbreviated names: ¹​It_is_hard_or_impossible_to_call_him_her_back,
+#   ²​Noise_sensitive_thunder._firecrackers._etc.
+# ℹ 14 more variables: Aggression_towards_other_dogs <dbl>,
+#   He_she_barks_too_much <dbl>, Jumps_on_people <dbl>, Shy <dbl>,
+#   Aggression_towards_people <dbl>, Hyperactive <dbl>, Adult_man <dbl>,
+#   Another_dog <dbl>, Adult_woman <dbl>, Postman <dbl>,
+#   Children_less_than_10_years_old <dbl>, A_man_with_a_beard <dbl>, …

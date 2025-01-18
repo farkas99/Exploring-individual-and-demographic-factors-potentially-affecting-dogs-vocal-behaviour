@@ -1,0 +1,120 @@
+# Generate Final HTML Report
+# This script combines all analyses and visualizations into a single HTML report
+
+# Load required packages
+if (!require("rmarkdown")) install.packages("rmarkdown")
+if (!require("knitr")) install.packages("knitr")
+library(rmarkdown)
+library(knitr)
+
+# Set base directory path
+base_dir <- file.path(getwd(), "Exploring_Dogs_Vocal_Behaviour_Analysis", "Cluster_R")
+
+# Create R Markdown content
+rmd_content <- '
+---
+title: "Dog Behavioral Pattern Analysis: Comprehensive Report"
+date: "`r format(Sys.time(), "%B %d, %Y")`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    theme: united
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# Executive Summary
+
+This report presents a comprehensive analysis of dog behavioral patterns using multiple datasets and advanced clustering techniques. The analysis revealed two distinct behavioral groups and validated the importance of using multiple behavioral measures for assessment.
+
+## Key Findings
+
+```{r, out.width="100%"}
+knitr::include_graphics("results/final_visualizations/dataset_analysis_summary.png")
+```
+
+# Dataset Analysis
+
+## Response Patterns
+
+```{r, out.width="100%"}
+knitr::include_graphics("results/final_visualizations/response_patterns_stacked.png")
+```
+
+## Dataset Complexity
+
+```{r, out.width="100%"}
+knitr::include_graphics("results/final_visualizations/dataset_complexity.png")
+```
+
+## Inter-Dataset Correlations
+
+```{r, out.width="100%"}
+knitr::include_graphics("results/final_visualizations/correlation_network.png")
+```
+
+# Clustering Results
+
+## Cluster Characteristics
+
+```{r, out.width="100%"}
+knitr::include_graphics("results/visualizations/behavioral_profiles.png")
+```
+
+## Cluster Distribution
+
+```{r, out.width="100%"}
+knitr::include_graphics("results/final_visualizations/cluster_distribution.png")
+```
+
+# Detailed Findings
+
+```{r, results="asis"}
+cat(readLines("results/dataset_relationships_summary.md"), sep = "\\n")
+```
+
+# Conclusions and Recommendations
+
+```{r, results="asis"}
+cat(readLines("results/final_conclusions.md"), sep = "\\n")
+```
+
+# Methodological Details
+
+## Dataset Characteristics
+
+```{r, out.width="100%"}
+knitr::include_graphics("results/final_visualizations/dataset_metrics.png")
+```
+
+## Analysis Approach
+- Multiple clustering methods used
+- Cross-validation between datasets
+- Comprehensive behavioral assessment
+- Environmental context consideration
+
+# Future Directions
+
+1. Longitudinal Studies
+2. Breed-Specific Analysis
+3. Intervention Effectiveness
+4. Environmental Impact Assessment
+
+'
+
+# Write R Markdown file
+writeLines(rmd_content, file.path(base_dir, "final_report.Rmd"))
+
+# Render the report
+rmarkdown::render(
+  file.path(base_dir, "final_report.Rmd"),
+  output_file = file.path(base_dir, "results", "final_report.html"),
+  quiet = TRUE
+)
+
+cat("Final report generated. Results saved as 'results/final_report.html'\n")

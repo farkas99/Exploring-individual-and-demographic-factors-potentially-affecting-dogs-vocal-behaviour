@@ -1,0 +1,55 @@
+Data Granularity Analysis
+========================
+
+
+Problems Dataset:
+------------------
+Unique behavior patterns: 314 
+Total observations: 5587 
+Pattern ratio (unique/total): 0.0562 
+
+Top 10 most common patterns:
+behavior_patterns
+0000000010 0010000000 0000010000 0001000000 0000001000 0100000000 0010001000 
+      1616        443        274        261        216        185        142 
+0000100000 1000000000 0011000000 
+       130        120         99 
+
+
+Growling Dataset:
+------------------
+Unique behavior patterns: 175 
+Total observations: 5587 
+Pattern ratio (unique/total): 0.0313 
+
+Top 10 most common patterns:
+behavior_patterns
+000010000 010000000 000000000 000000010 010000010 000100000 000001000 000000001 
+     1327      1277       933       350       191       142        85        82 
+010100000 010001000 
+       67        61 
+
+
+Howling Dataset:
+------------------
+Unique behavior patterns: 11 
+Total observations: 5587 
+Pattern ratio (unique/total): 0.002 
+
+Top 10 most common patterns:
+behavior_patterns
+0100 0001 0011 0010 1000 1001 1011 0101 0110 1010 
+4593  691   84   74   57   40   32    7    5    2 
+
+
+Keeping Dataset:
+------------------
+Unique behavior patterns: 17 
+Total observations: 5587 
+Pattern ratio (unique/total): 0.003 
+
+Top 10 most common patterns:
+behavior_patterns
+00001 00101 00100 10001 10101 10000 10100 00110 00011 01000 
+ 3994  1020   373    53    49    35    34     6     4     4 
+

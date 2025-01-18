@@ -1,0 +1,48 @@
+Dataset Relationship Analysis
+===========================
+
+
+Problems Dataset:
+-----------------
+Total dogs: 5587
+Dogs with no responses: 0 (0.0%)
+Dogs with single response: 3352 (60.0%)
+Dogs with multiple responses: 2235 (40.0%)
+Average responses per dog: 1.66
+Maximum responses per dog: 8
+
+Growling Dataset:
+-----------------
+Total dogs: 5587
+Dogs with no responses: 933 (16.7%)
+Dogs with single response: 3335 (59.7%)
+Dogs with multiple responses: 1319 (23.6%)
+Average responses per dog: 1.36
+Maximum responses per dog: 8
+
+Howling Dataset:
+-----------------
+Total dogs: 5587
+Dogs with no responses: 0 (0.0%)
+Dogs with single response: 5415 (96.9%)
+Dogs with multiple responses: 172 (3.1%)
+Average responses per dog: 1.04
+Maximum responses per dog: 4
+
+Keeping Dataset:
+-----------------
+Total dogs: 5587
+Dogs with no responses: 0 (0.0%)
+Dogs with single response: 4409 (78.9%)
+Dogs with multiple responses: 1178 (21.1%)
+Average responses per dog: 1.22
+Maximum responses per dog: 4
+
+Cross-Dataset Correlations
+------------------------
+problems vs growling: 0.254
+problems vs howling: 0.034
+problems vs keeping: 0.014
+growling vs howling: 0.044
+growling vs keeping: 0.006
+howling vs keeping: 0.040
